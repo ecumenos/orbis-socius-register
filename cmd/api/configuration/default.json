@@ -1,0 +1,20 @@
+{
+  "apiLocal": true,
+  "apiHTTP": {
+    "addr": ":9090",
+    "handlerTimeout": 30000000000,
+    "readTimeout": 15000000000,
+    "writeTimeout": 15000000000,
+    "idleTimeout": 15000000000
+  },
+  "apiDataStore": {
+    "url": "postgresql://ecumenosuser:rootpassword@localhost:5432/ecumenos_orbis_socius_register_apidb",
+    "migrationsPath": "file://cmd/api/migrations"
+  },
+  "apiLogger": {
+    "prod": false
+  },
+  "apiResponseFactory": {
+    "writeLogs": true
+  }
+}
