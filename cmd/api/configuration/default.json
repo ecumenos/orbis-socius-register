@@ -16,5 +16,11 @@
   },
   "apiResponseFactory": {
     "writeLogs": true
+  },
+  "apiSMTPSender": {
+    "from": "",
+    "password": "",
+    "smtpHost": "",
+    "smtpPort": 587
   }
 }

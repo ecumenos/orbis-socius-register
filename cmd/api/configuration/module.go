@@ -6,6 +6,7 @@ import (
 	"github.com/ecumenos/fxecumenos/fxrf"
 	"github.com/ecumenos/go-toolkit/envutils"
 	"github.com/ecumenos/orbis-socius-register/cmd/api/httpserver"
+	"github.com/ecumenos/orbis-socius-register/cmd/api/smtp"
 	"github.com/jinzhu/configor"
 	"github.com/joho/godotenv"
 	"go.uber.org/fx"
@@ -32,5 +33,6 @@ var Module = fx.Options(
 		func(cfg *Config) *fxpostgres.Config { return cfg.APIDataStore },
 		func(cfg *Config) *fxlogger.Config { return cfg.APILogger },
 		func(cfg *Config) *fxrf.Config { return cfg.APIResponseFactory },
+		func(cfg *Config) *smtp.SenderConfig { return cfg.APISMTPSender },
 	),
 )
